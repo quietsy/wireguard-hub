@@ -3,14 +3,16 @@
 <head> 
   <title>Unblock</title> 
 </head> 
-<body style="background-color:black;"> 
+<body style="background-color:black;font-size:34pt;color:white;"> 
 <center>
 <form method="post" style="padding-top:10%;"> 
   <input type="text" name="URL" id="URL" style="height:80px;font-size:34pt;"><br><br>
   <button type="submit" name="Unblock" style="height:80px;font-size:34pt;">Unblock</button> 
 </form> 
-</center>
 <?php 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
 if(isset($_POST['Unblock'])) { 
 	$url = $_POST['URL'];
 	$file = 'domains.txt';
@@ -24,6 +26,7 @@ if(isset($_POST['Unblock'])) {
 	}
 } 
 ?> 
+</center>
  
 </body> 
 </html> 
