@@ -30,7 +30,7 @@ services:
       - DOCKER_MODS=linuxserver/mods:universal-package-install
       - INSTALL_PACKAGES=ipset
     volumes:
-      - /path/to/wireguard/config:/config
+      - ./wireguard:/config
     ports:
       - 51820:51820/udp
     sysctls:
